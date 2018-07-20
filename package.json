@@ -1,0 +1,35 @@
+{
+  "name": "penguin.js",
+  "version": "1.0.0",
+  "description": "Agnostic inplace CMS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "render": "node render.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penguin-digital/penguin.js.git"
+  },
+  "keywords": [
+    "penguin"
+  ],
+  "author": "pA1nD and IvaKop",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/penguin-digital/penguin.js/issues"
+  },
+  "homepage": "https://github.com/penguin-digital/penguin.js#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsdom": "^11.11.0",
+    "mongodb": "^3.1.1",
+    "simmerjs": "^0.5.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
