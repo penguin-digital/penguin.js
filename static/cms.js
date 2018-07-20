@@ -11,7 +11,19 @@ onSave = () => {
   }
 }
 
+onPublish = () => {
+  const request = new XMLHttpRequest()
+  request.onreadystate = handleRequest
+  request.open('POST', '/publish', true)
+  request.setRequestHeader('Content-Type', 'application/json')
+  request.send()
+  function handleRequest() {
+    console.log(request.responseText)
+  }
+}
+
 document.querySelector('#save').addEventListener('click', onSave)
+document.querySelector('#publish').addEventListener('click', onPublish)
 
 const elements = document.querySelectorAll(
   'p,h1,h2,h3,h4,h5,h6,span,a,pre,address,input'
