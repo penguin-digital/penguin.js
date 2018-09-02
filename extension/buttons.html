@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Penguin CMS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .penguin__penguin-box {
+      display: flex;
+    }
+
+    /* Button Styles */
+
+    .penguin__penguin-btn {
+      cursor: pointer;
+      pointer-events: all;
+      z-index: 99999;
+      background-color: #5d5d5d;
+      padding: 10px 26px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      color: #fff;
+    }
+
+    .penguin__penguin-btn:not(:last-child) {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="penguin__penguin-box">
+    <a id="save" class="penguin__penguin-btn">Save</a>
+    <a id="publish" class="penguin__penguin-btn">Publish</a>
+  </div>
+
+  <script src="buttons.js"></script>
+</body>
+
+</html>

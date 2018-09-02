@@ -30,12 +30,23 @@ app.post('/api', (req, res) => {
   res.status(200).send()
 })
 
+app.get('/api', (req, res) => {
+  db.collection('Edits')
+    .find({})
+    .toArray((err, result) => {
+      if (err) throw err
+      console.log(result)
+      res.json(result)
+    })
+})
+
 MongoClient.connect(
   URL,
   { useNewUrlParser: true },
   function(err, client) {
     if (err) throw err
     db = client.db()
+    db.collection('Edits').drop()
     db.createCollection('Edits', function(err, res) {
       if (err) throw err
       console.log('Collection created!')

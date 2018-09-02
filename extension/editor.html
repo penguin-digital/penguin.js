@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Penguin CMS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .penguin__penguin-box {
+      display: flex;
+      background-color: white;
+    }
+
+    /* Button Styles */
+
+    .penguin__penguin-btn {
+      cursor: pointer;
+      pointer-events: all;
+      z-index: 99999;
+      background-color: #5d5d5d;
+      padding: 10px 26px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      color: #fff;
+      margin-top: 25px;
+      display: inline-block;
+    }
+
+    .penguin__penguin-btn:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    .ba {
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    .b--black-20 {
+      border-color: rgba(0, 0, 0, .2);
+    }
+
+    .db {
+      display: block;
+    }
+
+
+    .b {
+      font-weight: bold;
+    }
+
+    .input-reset {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .input-reset::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .black-80 {
+      color: rgba(0, 0, 0, .8);
+    }
+
+
+    .pa2 {
+      padding: .5rem;
+    }
+
+    .pa4 {
+      padding: 2rem;
+    }
+
+    .mb2 {
+      margin-bottom: .5rem;
+    }
+
+    .f6 {
+      font-size: .875rem;
+    }
+
+    .measure {
+      max-width: 30em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="penguin__penguin-box">
+    <div class="pa4 black-80">
+      <div class="measure">
+        <label for="href" class="f6 b db mb2">HREF</label>
+        <input id="href" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
+      </div>
+      <div class="measure">
+        <label for="select" class="f6 b db mb2">Add another attribute</label>
+        <select class="input-reset ba b--black-20 pa2 mb2 db w-100">
+        <option> download </option>
+        <option> hreflang </option>
+        <option> media </option>
+        <option> ping </option>
+        <option> rel </option>
+        <option> shape </option>
+        <option> target </option>
+      </select>
+      </div>
+      <a id="save" class="penguin__penguin-btn">Save</a>
+    </div>
+
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+
+</html>

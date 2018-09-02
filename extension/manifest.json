@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "penguin.js",
+  "version": "0.2.2",
+  "description":
+    "Agnostic Inplace CMS that works best with a Static Site Generator",
+  "icons": {
+    "32": "icon32.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon64.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["simmer.js", "content.js"]
+    }
+  ],
+  "short_name": "PCMS",
+  "permissions": ["notifications", "storage"],
+  "web_accessible_resources": [
+    "buttons.html",
+    "menu.html",
+    "editor.html",
+    "content.css",
+    "simmer.js"
+  ]
+}

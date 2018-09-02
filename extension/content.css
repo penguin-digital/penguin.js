@@ -1,0 +1,55 @@
+/* Button Frame */
+.penguin-button-box {
+  border: none;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 210px;
+  height: 35px;
+  z-index: 2147483647;
+}
+
+/* Editor Frame */
+.penguin-editor-box {
+  border: none;
+  position: fixed;
+  right: 25px;
+  bottom: 85px;
+  width: 210px;
+  height: 250px;
+  z-index: 2147483647;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Editables */
+[contenteditable='true'] {
+  outline-color: rgba(55, 55, 55, 0.08);
+  outline-offset: 0px;
+  outline-style: dashed;
+  outline-width: thin;
+}
+[contenteditable='true']:hover {
+  outline-color: rgba(255, 0, 0, 0.3);
+  outline-offset: 0px;
+  outline-style: dotted;
+  outline-width: thin;
+}
+[contenteditable='true']:empty {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+[contenteditable='true']:empty:before {
+  content: empty;
+}
+
+/* Menu */
+
+.penguin-menu {
+  width: 120px;
+  height: 90px;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background-color: white;
+  display: none;
+  border: none;
+  z-index: 2147483647;
+}
