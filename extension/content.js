@@ -22,7 +22,8 @@ window.penguin = {
   eventListeners: [],
   elements: [],
   target: undefined,
-  server: 'http://localhost:3000'
+  // server: 'http://localhost:3000'
+  server: 'https://penguinjs.herokuapp.com'
 }
 
 const addEventListener = (scope, type, handler) => {
