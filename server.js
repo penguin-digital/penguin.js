@@ -2,7 +2,6 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongo = require('mongodb')
-const { exec } = require('child_process')
 
 const PORT = process.env.PORT || 3000
 const URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/dev'
@@ -15,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'penguin/index.html'))
+  res.sendFile(path.join(__dirname, '/index.html'))
 })
 
 app.post('/api', (req, res) => {
@@ -31,16 +30,14 @@ app.post('/api', (req, res) => {
   res.status(200).send()
 })
 
-app.post('/publish', (req, res) => {
-  console.log('working')
-  exec('node render.js', (err, stdout, stderr) => {
-    if (err) {
-      return
-    }
-    console.log(`stdout: ${stdout}`)
-    console.log(`stderr: ${stderr}`)
-  })
-  res.status(200).send()
+app.get('/api', (req, res) => {
+  db.collection('Edits')
+    .find({})
+    .toArray((err, result) => {
+      if (err) throw err
+      console.log(result)
+      res.json(result)
+    })
 })
 
 MongoClient.connect(
