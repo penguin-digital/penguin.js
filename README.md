@@ -12,7 +12,8 @@
 
 - Add the `extension` folder to chrome as a plugin.
 - Install dependencies `npm i`
-- Start the server `npm run dev` (make sure there is a MongoDB running)
+- Start the server `npm run dev`
+- Make sure there is a MongoDB running with `mongod`
 
 **Usage**
 
